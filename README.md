@@ -13,3 +13,5 @@ Users will be able to design their own mailer themes as templates, and then crea
 4. A user can optionally input content such as product data or promotional material to populate the template.
 
 The minimum expectation for completion of the project in the context of this course will primarily be to allow users to register and login, access their mailer files and templates, create, edit, update, and delete mailers, and introduce basic functionality of the designing process.
+
+
