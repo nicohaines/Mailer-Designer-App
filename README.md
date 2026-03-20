@@ -1,6 +1,6 @@
 **Web and Database Programming CPS 553**
 
-# Mailer/Newsletter Creator
+# Mailer/Newsletter Designer App
 
 The idea of this project is to allow users to create mailer templates for personal or business use. The goal is to avoid hardcoding mailer content while still allowing customizable preferences for newsletters, while keeping the application flexible, easy to modify, and supported by some level of automation and welcoming user experience.
 
@@ -14,4 +14,4 @@ Users will be able to design their own mailer themes as templates, and then crea
 
 The minimum expectation for completion of the project in the context of this course will primarily be to allow users to register and login, access their mailer files and templates, create, edit, update, and delete mailers, and introduce basic functionality of the designing process.
 
-
+![Picture](./Images/ERD.png)
