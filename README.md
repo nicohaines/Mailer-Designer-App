@@ -14,4 +14,14 @@ Users will be able to design their own mailer themes as templates, and then crea
 
 The minimum expectation for completion of the project in the context of this course will primarily be to allow users to register and login, access their mailer files and templates, create, edit, update, and delete mailers, and introduce basic functionality of the designing process.
 
-![Picture](./Images/ERD.png)
+## Entity Relation Diagram (ERD)
+
+This project will consist of 3 total entities. A user will be able to create email templates, then create mailers using their own pre-built templates. The ERD below showcases how these 3 entities will connect to each other.
+
+![ERD](./Images/ERD.png)
+
+## Relations (3NF)
+
+The Relations Diagram below in Third Normal Form removes redundancies and splits the entity multi-valued attributes, such as Sections and Preferences, into separate object types.
+
+![Relations](./Images/Relations.png)
