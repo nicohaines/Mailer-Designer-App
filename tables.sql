@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS User {
     firstName VARCHAR(50) NOT NULL,
     lastName VARCHAR(50) NOT NULL,
     CONSTRAINT userPK PRIMARY KEY (userId)
-}
+};
 
 CREATE TABLE IF NOT EXISTS Template {
     templateId INT AUTO_INCREMENT,
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS Template {
     footer VARCHAR(100000),
     userId INT NOT NULL REFERENCES User(userId),
     CONSTRAINT userFK FOREIGN KEY (userId) REFERENCES User(userId)
-}
+};
 
 CREATE TABLE IF NOT EXISTS TemplatePreference (
   templateId INT,
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS Mailer {
     templateId INT NOT NULL REFERENCES Template(templateId),
     CONSTRAINT userFK FOREIGN KEY (userId) REFERENCES User(userId),
     CONSTRAINT templateFK FOREIGN KEY (templateId) REFERENCES Template(templateId)
-}
+};
 
 CREATE TABLE IF NOT EXISTS MailerSection (
   mailerId INT,
