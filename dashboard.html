@@ -20,16 +20,18 @@
     <main>
         <section class="create-mailer">
             <h1>Create a new Mailer</h1>
-            <div><label>Title: </label><input type="text" placeholder=""></div>
-            <div><label>Import Info: </label><input type="file"> </div>
-            <label for="cars">Mailer Category: </label>
-            <select name="mailer types">
-                <option value="Product">Product</option>
-                <option value="Newsletter">Newsletter</option>
-                <option value="Promotional">Promotional</option>
-                <option value="Announcement">Announcement</option>
-            </select>
-            <div><input type="submit" value="Create"></div>
+            <form id="mailer">
+                <div><label>Title: </label><input type="text" placeholder="" id="title" required></div>
+                <div><label>Import Info: </label><input type="file" id="importInfo"> </div>
+                <label for="cars">Mailer Category: </label>
+                <select name="mailer types" id="category">
+                    <option value="Product">Product</option>
+                    <option value="Newsletter">Newsletter</option>
+                    <option value="Promotional">Promotional</option>
+                    <option value="Announcement">Announcement</option>
+                </select>
+                <div><input type="submit" value="Create"></div>
+            </form>
         </section>
         <section class="mailer-list">
             <h1>Your Mailers</h1>
@@ -45,6 +47,7 @@
             </ul>
         </section>
     </main>
+    <script src="./scripts/mailer.js"></script>
 </body>
 
 </html>
