@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./user.js"></script>
 </head>
 
 <body>
@@ -21,17 +22,19 @@
         <img src="images/banner.jpg" alt="Banner" class="login-banner">
         <div class="box">
             <h2>Register</h2>
-
-            <input class="fa" type="text" placeholder="First Name">
-            <input class="fa" type="text" placeholder="Last Name">
-            <input class="fa" type="email" placeholder="Email">
-            <input class="fa" type="password" placeholder="Password">
-            <input class="fa" type="submit" value="Register">
+            <form id="register">
+                <input class="fa" id="firstName" type="text" placeholder="First Name" required>
+                <input class="fa" id="lastName" type="text" placeholder="Last Name" required>
+                <input class="fa" id="email" type="email" placeholder="Email" required>
+                <input class="fa" id="password" type="password" placeholder="Password" required>
+                <input class="fa" type="submit" value="Register">
+            </form>
 
             <p>Already have an account? <a href="login.html">Login here</a></p>
         </div>
     </main>
 
+    <script src="./scripts/user.js"></script>
 </body>
 
 </html>

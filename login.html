@@ -21,13 +21,16 @@
         <img src="images/banner.jpg" alt="Banner" class="login-banner">
         <div class="box">
             <h2>Login</h2>
-            <input class="fa" type="text" placeholder="Email">
-            <input class="fa" type="password" placeholder="Password">
-            <input type="submit" value="Login">
+            <form id="login">
+                <input class="fa" id="email" type="email" placeholder="Email" required>
+                <input class="fa" id="password" type="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+            </form>
             <p>Don't have an account? <a href="register.html">Sign up here</a></p>
         </div>
     </main>
 
+    <script src="./scripts/user.js"></script>
 </body>
 
 </html>
