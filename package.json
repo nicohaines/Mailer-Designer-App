@@ -1,0 +1,29 @@
+{
+  "name": "mailer-project",
+  "version": "1.0.0",
+  "description": "**Web and Database Programming CPS 553**",
+  "homepage": "https://github.com/nicohaines/Mailer-Designer#readme",
+  "bugs": {
+    "url": "https://github.com/nicohaines/Mailer-Designer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicohaines/Mailer-Designer.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

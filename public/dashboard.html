@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div>
+            <a href="index.html">Home</a>
+            <a class="dropdown" href="dashboard.html">Dashboard</a>
+            <a href="login.html">Account</a>
+        </div>
+    </nav>
+
+    <div class="mailer">
+        <h1>Create a new Mailer</h1>
+        <form id="mailer">
+            <div><label>Title: </label><input type="text" placeholder="" id="title" required></div>
+            <div><label>Import Info: </label><input type="file" id="importInfo"> </div>
+            <label for="cars">Mailer Category: </label>
+            <select name="mailer types" id="category">
+                <option value="Product">Product</option>
+                <option value="Newsletter">Newsletter</option>
+                <option value="Promotional">Promotional</option>
+                <option value="Announcement">Announcement</option>
+            </select>
+            <div><input type="submit" value="Create"></div>
+        </form>
+    </div>
+    <div class="mailers">
+        <h1>Your Mailers</h1>
+        <ul>
+            <li>Mailer 1 | <a href="">Preview</a> | <a href="">Edit</a> | <a href="">Delete</a> | <a href="">Export</a>
+            </li>
+            <li>Mailer 2 | <a href="">Preview</a> | <a href="">Edit</a> | <a href="">Delete</a> | <a href="">Export</a>
+            </li>
+            <li>Mailer 3 | <a href="">Preview</a> | <a href="">Edit</a> | <a href="">Delete</a> | <a href="">Export</a>
+            </li>
+            <li>Mailer 4 | <a href="">Preview</a> | <a href="">Edit</a> | <a href="">Delete</a> | <a href="">Export</a>
+            </li>
+        </ul>
+    </div>
+    <script src="./scripts/mailer.js"></script>
+</body>
+
+</html>
