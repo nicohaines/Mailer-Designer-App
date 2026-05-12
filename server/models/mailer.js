@@ -1,4 +1,4 @@
-import con from("./db_connect.js")
+const con = require("./db_connect")
 
 async function createMailerTable() {
     let sql = `
@@ -6,10 +6,9 @@ async function createMailerTable() {
         mailerId INT AUTO_INCREMENT,
         mailerName VARCHAR(255) NOT NULL,
         mailerType VARCHAR(255),
+        isTemplate BOOLEAN,
         userId INT NOT NULL REFERENCES User(userId),
-        templateId INT NOT NULL REFERENCES Template(templateId),
-        CONSTRAINT userFK FOREIGN KEY (userId) REFERENCES User(userId),
-        CONSTRAINT templateFK FOREIGN KEY (templateId) REFERENCES Template(templateId)
+        CONSTRAINT mailerPK PRIMARY KEY(mailerId)
     );`
 
     await con.query(sql)
@@ -24,4 +23,11 @@ async function getAllMailers() {
     return await con.query(sql)
 }
 
-export { getAllMailers }
+async function getAllMailers() {
+    let sql = `
+      SELECT * FROM Mailer;
+    `
+    return await con.query(sql)
+}
+
+module.exports = { getAllMailers }
