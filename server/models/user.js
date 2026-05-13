@@ -64,23 +64,33 @@ async function register(user) {
 }
 
 async function update(user) {
-  let hashedPassword = await bcrypt.hash(user.password, 10);
+  let cUser = await getUserByEmail(user.email);
+  if (!cUser) throw Error("Error finding user.");
+
+  let match = await bcrypt.compare(user.password, cUser.password);
+  if (!match) throw Error("Password does not match current password.");
+
+  let same = await bcrypt.compare(user.newPassword, cUser.password);
+  if (same) throw Error("New password cannot be the same as the current password.");
+
+  let hashedPassword = await bcrypt.hash(user.newPassword, 10);
+
   let sql = `
     UPDATE User
-    SET firstName=?, lastName=?, password=?
+    SET password=?
     WHERE userId=?
   `;
 
   await con.query(sql, [
-    user.firstName,
-    user.lastName,
     hashedPassword,
-    user.userId,
+    cUser.userId,
   ]);
+
+  return cUser;
 }
 
 async function remove(user) {
-    let sql = `
+  let sql = `
     DELETE FROM User
     WHERE userId=?
   `;

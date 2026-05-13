@@ -29,7 +29,7 @@ router.get('/getAllUsers', async (req, res) => {
     }
 })
 
-.put('/update', async (req, res) => {
+.patch('/update', async (req, res) => {
     try {
         const user = await User.update(req.body)
         res.send({...user, password: undefined})   

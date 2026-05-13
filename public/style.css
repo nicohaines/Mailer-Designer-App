@@ -38,11 +38,16 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.account-container {
+    width: 85%;
+    max-width: 800px;
+}
+
 .login-container .box {
     padding: 20px;
 }
 
-.login-container input{
+.login-container input, #logout-button{
     font-family: Arial, sans-serif;
     font-weight: normal;
     border: none;
@@ -57,7 +62,7 @@ body {
     box-sizing: border-box;
 }
 
-.login-container input[type="submit"] {
+.login-container input[type="submit"], #logout-button {
     background-color: rgb(46, 111, 143);
     color: white;
     font-size: 1.2rem;
@@ -65,9 +70,18 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
+#logout-button {
+    background-color: rgb(143, 46, 46);
+    margin-top: 30px;
+}
+
 
 .login-container input[type="submit"]:hover {
     background-color: rgb(30, 80, 100);
+}
+
+#logout-button:hover {
+    background-color: rgb(100, 30, 30);
 }
 
 .login-container p {
@@ -81,4 +95,12 @@ img.login-banner {
     padding: 0;
     margin: 0;
     z-index: -5;
+}
+
+#error {
+    color: red;
+}
+
+#message {
+    color: green;
 }
