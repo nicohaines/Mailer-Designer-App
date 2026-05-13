@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav class="navbar">
         <!-- <div>
@@ -14,12 +16,12 @@
             <a href="login.html">Account</a>
         </div> -->
     </nav>
+    <img src="images/banner-2.jpg" alt="Banner" class="login-banner">
 
     <main class="login-container account-container">
-        <img src="images/banner-2.jpg" alt="Banner" class="login-banner">
+        <h1 class="displayName"></h1>
         <div class="box">
-            <h1 class="displayName"></h1>
-            <p><strong>Change Password:</strong></p>
+            <p><strong>Change Password</strong></p>
             <form id="change-password">
                 <input class="fa" id="current-password" type="password" placeholder="Current Password" required>
                 <input class="fa" id="new-password" type="password" placeholder="New Password" required>
@@ -27,6 +29,7 @@
             </form>
             <div id="message"></div>
             <div id="error"></div>
+            <p><strong>Account Logout</strong></p>
             <a id="logout-button">Logout</a>
         </div>
     </main>
@@ -34,4 +37,5 @@
     <script type="module" src="./scripts/user.js"></script>
     <script type="module" src="./scripts/main.js"></script>
 </body>
+
 </html>

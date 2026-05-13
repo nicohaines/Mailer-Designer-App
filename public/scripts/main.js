@@ -1,8 +1,10 @@
 import { getCurrentUser, removeCurrentUser } from "./user.js";
 
+// Navigation bar display logic
 let cUser = await getCurrentUser();
 let nav = document.querySelector(".navbar");
 let displayName = document.querySelector(".displayName");
+
 if (cUser) {
   if (nav) {
     nav.innerHTML = `
@@ -28,6 +30,33 @@ if (cUser) {
   if (displayName) {
     displayName.innerText = ``;
   }
+}
+
+// Dashboard mailer list logic
+let mailerList = document.querySelector(".mailer-list");
+if (mailerList && cUser) {
+  fetchData("/mailer/getAllUserMailers", { user: cUser }, "POST")
+    .then((data) => {
+      data.forEach((mailer) => {
+        let li = document.createElement("li");
+        li.innerHTML = `
+            <span class="mailer-title"><strong>${mailer.mailerName}</strong></span>
+                <div class="actions">
+                    <a href=""><i class="fa-solid fa-eye"></i><span class="button-text">&nbsp;Preview</span></a>
+                    <a class="green-button" href=""><i class="fa-solid fa-pen"></i><span
+                            class="button-text">&nbsp;Edit</span></a>
+                    <a class="red-button" href=""><i class="fa-solid fa-trash"></i><span
+                            class="button-text">&nbsp;Delete</span></a>
+                    <a class="blue-button" href=""><i class="fa-solid fa-arrow-up-from-bracket"></i><span
+                            class="button-text">&nbsp;Export</span></a>
+                </div>
+        `;
+        mailerList.appendChild(li);
+      });
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
 }
 
 // logout event listener

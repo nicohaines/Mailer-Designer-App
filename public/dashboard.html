@@ -16,33 +16,45 @@
             <a href="login.html">Account</a>
         </div> -->
     </nav>
+    <img src="images/banner-2.jpg" alt="Banner" class="login-banner">
 
     <div class="mailer">
-        <h1>Create a new Mailer</h1>
+        <h1>Create a New Mailer</h1>
         <form id="mailer">
-            <div><label>Title: </label><input type="text" placeholder="" id="title" required></div>
-            <div><label>Import Info: </label><input type="file" id="importInfo"> </div>
-            <label for="cars">Mailer Category: </label>
+            <div><label>Title:</label><input type="text" placeholder="Mailer Title" id="title" required></div>
+            <!-- <div><label>Import Info:</label><input type="file" id="importInfo"> </div> -->
+            <label for="category">Category:</label>
             <select name="mailer types" id="category">
                 <option value="Product">Product</option>
                 <option value="Newsletter">Newsletter</option>
                 <option value="Promotional">Promotional</option>
                 <option value="Announcement">Announcement</option>
             </select>
+            <!-- <label for="category">Template:</label> -->
+
             <div><input type="submit" value="Create"></div>
+            <div id="error"></div>
+
         </form>
     </div>
     <div class="mailers">
-        <h1>Your Mailers</h1>
-        <ul>
-            <li>Mailer 1 | <a href="">Preview</a> | <a href="">Edit</a> | <a href="">Delete</a> | <a href="">Export</a>
+        <h1>Mailers</h1>
+        <ul class="mailer-list">
+            <!--Design Template
+            <li>
+                <span class="mailer-title"><strong>Mailer Title</strong></span>
+                <div class="actions">
+                    <a href=""><i class="fa-solid fa-eye"></i><span class="button-text">&nbsp;Preview</span></a>
+                    <a class="green-button" href=""><i class="fa-solid fa-pen"></i><span
+                            class="button-text">&nbsp;Edit</span></a>
+                    <a class="red-button" href=""><i class="fa-solid fa-trash"></i><span
+                            class="button-text">&nbsp;Delete</span></a>
+                    <a class="blue-button" href=""><i class="fa-solid fa-arrow-up-from-bracket"></i><span
+                            class="button-text">&nbsp;Export</span></a>
+                </div>
             </li>
-            <li>Mailer 2 | <a href="">Preview</a> | <a href="">Edit</a> | <a href="">Delete</a> | <a href="">Export</a>
-            </li>
-            <li>Mailer 3 | <a href="">Preview</a> | <a href="">Edit</a> | <a href="">Delete</a> | <a href="">Export</a>
-            </li>
-            <li>Mailer 4 | <a href="">Preview</a> | <a href="">Edit</a> | <a href="">Delete</a> | <a href="">Export</a>
-            </li>
+            -->
+
         </ul>
     </div>
     <script type="module" src="./scripts/mailer.js"></script>
